@@ -12,13 +12,22 @@ export default function SignUp() {
   const PasswordsMatch = password === confirmPassword;
   const isButtonDisabled = !isEmailValid || !isPasswordValid || !PasswordsMatch;
 
+  const [welcomeMessage, setWelcomeMessage] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setTimeout(() => {
-      e.target.innerText = "Account created successfully.";
+      setWelcomeMessage("Welcome!");
     }, 1000);
   };
+
+  if (welcomeMessage) {
+    return (
+      <p className="text-center  text-green  font-bold  text-3xl pt-12">
+        {welcomeMessage}
+      </p>
+    );
+  }
 
   return (
     <div className="pt-24">
