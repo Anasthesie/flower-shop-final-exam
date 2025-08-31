@@ -3,6 +3,7 @@ import "./App.css";
 import HeaderMenu from "./components/header";
 import LoginPage from "./pages/login-page";
 import HomePage from "./pages/home-page";
+import SignUpPage from "./pages/signup-page";
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
 
       <Routes>
         <Route index element={<HomePage />} />
-        <Route path="login" element={<LoginPage />} />
+        <Route path="log-in" element={<LoginPage />} />
+        <Route path="sign-up" element={<SignUpPage />} />
       </Routes>
     </div>
   );

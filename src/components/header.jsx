@@ -20,8 +20,8 @@ export default function Header() {
         </ul>
       </nav>
       <div className="flex gap-8">
-        <Link to="/login">Log in</Link>
-        <Link to="/sign-in">Sign in</Link>
+        <Link to="/log-in">Log in</Link>
+        <Link to="/sign-up">Sign up</Link>
       </div>
     </header>
   );
