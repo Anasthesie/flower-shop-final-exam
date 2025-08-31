@@ -8,15 +8,17 @@ export default function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const isEmailValid = /\S+@\S+\.\S+/.test(email);
+  const isPasswordValid = password.length >= 6;
+  const PasswordsMatch = password === confirmPassword;
+  const isButtonDisabled = !isEmailValid || !isPasswordValid || !PasswordsMatch;
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log({ email, password, confirmPassword });
+    setTimeout(() => {
+      e.target.innerText = "Account created successfully.";
+    }, 1000);
   };
-  if (isEmailValid) {
-    console.log("Form submitted with:", email);
-  }
 
   return (
     <div className="pt-24">
@@ -30,9 +32,6 @@ export default function SignUp() {
               label={"Email"}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {!isEmailValid && email && (
-              <p style={{ color: "red" }}>Invalid email format</p>
-            )}
           </div>
           <div className="mb-6">
             <Input
@@ -50,9 +49,20 @@ export default function SignUp() {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
+
+          <div className="mb-2 text-red-500 text-sm">
+            {!isEmailValid && email !== "" && <p>Invalid email format</p>}
+            {!isPasswordValid && password !== "" && (
+              <p>Password must be at least 6 characters</p>
+            )}
+            {!PasswordsMatch && confirmPassword !== "" && (
+              <p>Passwords do not match</p>
+            )}
+          </div>
+
           <Button
             type="submit"
-            disabled={!isEmailValid && email !== ""}
+            disabled={isButtonDisabled}
             text={"Sign Up"}
             className="w-full bg-green text-white hover:bg-green/80 mb-4 disabled:bg-green/80 disabled:cursor-not-allowed"
           />
