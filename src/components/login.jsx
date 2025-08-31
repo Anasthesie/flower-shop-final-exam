@@ -7,7 +7,7 @@ export default function Login() {
         <h2 className="text-center text-4xl text-green mb-6">LogIn</h2>
         <form>
           <div className="mb-4">
-            <Input type="text" name="username" label={"Username"} />
+            <Input type="text" name="email" label={"Email"} />
           </div>
           <div className="mb-6">
             <Input type="password" name="password" label={"Password"} />
