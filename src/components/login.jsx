@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div className="pt-24">
       <div className="max-w-sm mx-auto p-6 bg-white rounded-lg shadow-xl">
-        <h2 className="text-center text-4xl text-green mb-6">Login</h2>
+        <h2 className="text-center text-4xl text-green mb-6">LogIn</h2>
         <form>
           <div className="mb-4">
             <Input type="text" name="username" label={"Username"} />
