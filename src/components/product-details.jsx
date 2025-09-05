@@ -1,3 +1,21 @@
-export default function ProductDetails() {
-  return <></>;
+export default function ProductDetails({ product }) {
+  return (
+    <div className="bg-lightgreen min-h-screen">
+      <div className="max-w-lg mx-auto p-6">
+        <img
+          src={product.src}
+          alt={product.title}
+          className="w-full rounded-lg mb-4"
+        />
+        <h1 className="text-2xl font-bold mb-2 text-green">{product.title}</h1>
+        <p className="text-green mb-2">Price: {product.price}</p>
+        <p className="text-gray-700 mt-2">{product.description}</p>
+        {product.inStock ? (
+          <p className="text-green pt-12 font-bold">In Stock!</p>
+        ) : (
+          <p className="text-red-500  pt-12 font-bold">Out of Stock!</p>
+        )}
+      </div>
+    </div>
+  );
 }
