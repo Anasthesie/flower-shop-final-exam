@@ -4,6 +4,7 @@ import HeaderMenu from "./components/header";
 import LoginPage from "./pages/login-page";
 import HomePage from "./pages/home-page";
 import SignUpPage from "./pages/signup-page";
+import ProductsPage from "./pages/products-page";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="log-in" element={<LoginPage />} />
         <Route path="sign-up" element={<SignUpPage />} />
+        <Route path="products" element={<ProductsPage />} />
       </Routes>
     </div>
   );
