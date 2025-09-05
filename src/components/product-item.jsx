@@ -1,9 +1,13 @@
-export default function ProducItem({ src, price, title }) {
+import { Link } from "react-router";
+
+export default function ProducItem({ src, price, title, id }) {
   return (
-    <div className="pt-20">
-      <img src={src} className="rounded-sm cursor-pointer w-80 h-90"></img>
-      <p className="text-green">{title}</p>
-      <p className="text-green"> {price}</p>
-    </div>
+    <Link to={`/products/${id}`}>
+      <div className="pt-20">
+        <img src={src} className="rounded-sm cursor-pointer w-80 h-90"></img>
+        <p className="text-green">{title}</p>
+        <p className="text-green"> {price}</p>
+      </div>
+    </Link>
   );
 }
