@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+import Button from "./button";
 export default function ProductDetails({ product }) {
   return (
     <div className="bg-lightgreen min-h-screen">
@@ -15,6 +17,12 @@ export default function ProductDetails({ product }) {
         ) : (
           <p className="text-red-500  pt-12 font-bold">Out of Stock!</p>
         )}
+        <Link to="/products">
+          <Button
+            text={"Back to Shop"}
+            className="bg-green text-white hover:bg-green/80 mb-4 mt-7"
+          />
+        </Link>
       </div>
     </div>
   );
