@@ -3,7 +3,8 @@ import { useCart } from "../providers/cart-provider";
 import Button from "./button";
 
 export default function ProductDetails({ product }) {
-  const { addToCart } = useCart();
+  const { addToCart, isInCart } = useCart();
+  const alreadyAdded = isInCart(product.id);
 
   return (
     <div className="bg-lightgreen min-h-screen">
@@ -28,8 +29,10 @@ export default function ProductDetails({ product }) {
           />
         </Link>
         <Button
-          text={"Add to cart"}
-          onClick={() => addToCart(product)}
+          text={alreadyAdded ? "Already Added" : "Add to cart"}
+          onClick={() => {
+            if (!alreadyAdded) addToCart(product);
+          }}
           disabled={!product.inStock}
           className="bg-green text-white hover:bg-green/80 mb-4 "
         />

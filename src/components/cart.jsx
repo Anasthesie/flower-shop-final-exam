@@ -13,11 +13,16 @@ export default function CartPage() {
           {cartItems.map((item, index) => (
             <li
               key={index}
-              className="flex items-center gap-4 p-4 rounded shadow-md bg-white"
+              className="flex items-center justify-between gap-4 p-4 rounded shadow-md bg-white"
             >
-              <img src={item.src} className="w-20 h-20 object-cover rounded" />
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p>{item.price}</p>
+              <div>
+                <img
+                  src={item.src}
+                  className="w-20 h-20 object-cover rounded"
+                />
+                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <p>{item.price}</p>
+              </div>
 
               <div className="flex flex-col gap-2">
                 <Button

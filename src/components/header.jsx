@@ -33,7 +33,7 @@ export default function Header() {
           to="/cart"
           className="text-white text-2xl hover:text-warmwhite transition"
         >
-          <FaShoppingCart /> {cartItems.length}
+          <FaShoppingCart />
         </Link>
       </div>
     </header>
