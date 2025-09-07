@@ -14,9 +14,6 @@ export default function Header() {
           <li>
             <Link to="/products">Products</Link>
           </li>
-          <li>
-            <Link to="/fertilizer">Fertilizer</Link>
-          </li>
         </ul>
       </nav>
       <div className="flex gap-8">
