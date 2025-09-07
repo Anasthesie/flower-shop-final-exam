@@ -1,6 +1,10 @@
 import { Link } from "react-router";
+import { useCart } from "../providers/cart-provider";
 import Button from "./button";
+
 export default function ProductDetails({ product }) {
+  const { addToCart } = useCart();
+
   return (
     <div className="bg-lightgreen min-h-screen">
       <div className="max-w-lg mx-auto p-6">
@@ -25,6 +29,8 @@ export default function ProductDetails({ product }) {
         </Link>
         <Button
           text={"Add to cart"}
+          onClick={() => addToCart(product)}
+          disabled={!product.inStock}
           className="bg-green text-white hover:bg-green/80 mb-4 "
         />
       </div>

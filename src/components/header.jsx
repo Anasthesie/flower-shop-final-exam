@@ -1,7 +1,10 @@
 import { Link } from "react-router";
 import { FaUserCircle, FaShoppingCart } from "react-icons/fa";
+import { useCart } from "../providers/cart-provider";
 
 export default function Header() {
+  const { cartItems } = useCart();
+
   return (
     <header className="sticky top-0 z-50 flex justify-between items-center  px-6 py-4  bg-green text-white">
       <nav>
@@ -30,7 +33,7 @@ export default function Header() {
           to="/cart"
           className="text-white text-2xl hover:text-warmwhite transition"
         >
-          <FaShoppingCart />
+          <FaShoppingCart /> {cartItems.length}
         </Link>
       </div>
     </header>
