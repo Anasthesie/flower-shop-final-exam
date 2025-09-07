@@ -23,6 +23,10 @@ export default function ProductDetails({ product }) {
             className="bg-green text-white hover:bg-green/80 mb-4 mt-7"
           />
         </Link>
+        <Button
+          text={"Add to cart"}
+          className="bg-green text-white hover:bg-green/80 mb-4 "
+        />
       </div>
     </div>
   );

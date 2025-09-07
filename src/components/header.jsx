@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { FaUserCircle, FaShoppingCart } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -19,6 +20,18 @@ export default function Header() {
       <div className="flex gap-8">
         <Link to="/log-in">Log in</Link>
         <Link to="/sign-up">Sign up</Link>
+        <Link
+          to="/profile"
+          className="text-white text-2xl hover:text-warmwhite transition"
+        >
+          <FaUserCircle />
+        </Link>
+        <Link
+          to="/cart"
+          className="text-white text-2xl hover:text-warmwhite transition"
+        >
+          <FaShoppingCart />
+        </Link>
       </div>
     </header>
   );
