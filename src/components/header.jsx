@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center  px-6 py-4  bg-green text-white">
+    <header className="sticky top-0 z-50 flex justify-between items-center  px-6 py-4  bg-green text-white">
       <nav>
         <ul className="flex  gap-8">
           <li>
