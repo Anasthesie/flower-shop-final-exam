@@ -1,7 +1,9 @@
 import { useCart } from "../providers/cart-provider";
 import Button from "./button";
+import { useNavigate } from "react-router";
 export default function CartPage() {
   const { cartItems, removeFromCart } = useCart();
+  const navigate = useNavigate();
 
   return (
     <div className="container mx-auto px-6 py-20 ">
@@ -32,6 +34,7 @@ export default function CartPage() {
                 />
 
                 <Button
+                  onClick={() => navigate("/checkout")}
                   text={"Buy Now"}
                   className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded text-sm"
                 />

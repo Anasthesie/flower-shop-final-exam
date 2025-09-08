@@ -1,12 +1,70 @@
-# React + Vite
+# ყვავილების ქოთნების ვებსაიტი
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ეს არის React-ზე დაფუძნებული ვებგვერდი, რომელიც შექმნილია ყვავილების ქოთნების ონლაინ მაღაზიისთვის. პროექტი აერთიანებს პროდუქტების მრავალფეროვან კატალოგს, ინფორმაციულ სექციებს და მომავალში დამატებული ახალი ფუნქციების პრეზენტაციას, რაც მომხმარებელს საშუალებას აძლევს მარტივად იპოვოს და შეიძინოს სასურველი ნივთი.
 
-Currently, two official plugins are available:
+## შესრულებული თასქები
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+პროექტის ფარგლებში განხორციელდა:
 
-## Expanding the ESLint configuration
+1.  **პროდუქტის დეტალების გვერდი**:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- სურათი
+- აღწერა
+- ფასი
+- მარაგის ჩვენება
+
+2.  **პროდუქტის დამატება კალათაში**
+3.  **პროდუქტის წაშლა კალათიდან**
+4.  **დუბლიკატების აღკვეთა კალათაში** — ერთსა და იმავე პროდუქტს ვერ დაამატებ ორჯერ
+5.  **ღილაკის ტექსტის შეცვლა** — "Already Added" თუ პროდუქტი უკვე კალათაშია
+6.  **მარაგში არმყოფი პროდუქტის დამატების შეზღუდვა**
+7.  **კალათის გვერდი**:
+
+    - ნივთების ჩამონათვალი
+    - სურათი
+    - სახელი
+    - ფასით
+    - წაშლის ღილაკი
+    - ყიდვის ღილაკები
+
+8.  **About Us სექცია** — კომპანიის/მაღაზიის შესახებ ინფორმაციული ბლოკი
+9.  **Coming Soon სექცია** — ტექსტი ყვავილების მომავალში გაყიდვაზე და 3 სურათი
+10. **სტილიზაცია Tailwind CSS-ით**
+11. **კონტექსტის გამოყენება კალათის მართვისთვის (React Context API)**
+12. **ღილაკების აქტიური/დაბლოკილი მდგომარეობის ლოგიკა**
+13. **დამატებითი ტექსტური აღწერები და სექციები მთავარ გვერდზე**
+14. **მომხმარებლის რეგისტრაცია (Sign Up) ვალიდაციით**:
+
+- ელ. ფოსტის ვალიდაცია
+- პაროლის შემოწმება
+- პაროლების დამთხვევის გადამოწმება
+- შეცდომების შეტყობინება
+
+15. **ავტორიზაცია (Login) ვალიდაციით**:
+
+- ელ. ფოსტის და პაროლის შემოწმება
+- Google-ით ლოგინის სიმულაცია
+- შეცდომების შეტყობინება
+
+16. **ხელახალი გამოყენებადი კომპონენტები**:
+    - `Button`
+    - `Input`
+17. **Footer სექცია**
+
+---
+
+## პროექტის გაშვების ინსტრუქცია
+
+### მოთხოვნები:
+
+- Node.js 16+
+- npm ან yarn
+
+### გაშვება:
+
+1. პროექტის დაკლონვა:
+
+```bash
+git clone https://github.com/Anasthesie/flower-shop-final-exam
+cd flower-shop-final-exam
+```
