@@ -5,6 +5,8 @@ export default function Input({
   label,
   value,
   onChange,
+  checked,
+  ...rest
 }) {
   return (
     <div className="flex flex-col mb-4 text-sm">
@@ -19,6 +21,8 @@ export default function Input({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        checked={checked}
+        {...rest}
         className="p-2 border border-green rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
       />
     </div>

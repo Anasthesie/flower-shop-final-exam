@@ -50,6 +50,13 @@
     - `Button`
     - `Input`
 17. **Footer სექცია**
+18. **Shipping ფორმა**:
+  - Full Name
+  - Email
+  - Phone Number
+  - Address
+  - City
+  - ZIP Code
 
 ---
 
