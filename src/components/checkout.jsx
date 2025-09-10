@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Input from "./input";
 import Button from "./button";
-import Payment from "./payment";
 export default function CheckOut() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -142,7 +141,6 @@ export default function CheckOut() {
           className="w-full bg-green text-white hover:bg-green/80 mb-4 "
         />
       </form>
-      <Payment />
     </div>
   );
 }
